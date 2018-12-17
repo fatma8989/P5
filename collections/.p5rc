@@ -2,6 +2,7 @@
   "name": "collections",
   "projects": [
     "movingcircles",
-    "circlrtesting"
+    "circlrtesting",
+    "listOfSequreCircle"
   ]
 }
