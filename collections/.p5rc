@@ -3,6 +3,8 @@
   "projects": [
     "movingcircles",
     "circlrtesting",
-    "listOfSequreCircle"
+    "listOfSequreCircle",
+    "rectCircleDraw",
+    "sinfunction"
   ]
 }
