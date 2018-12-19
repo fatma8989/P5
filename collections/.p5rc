@@ -5,6 +5,7 @@
     "circlrtesting",
     "listOfSequreCircle",
     "rectCircleDraw",
-    "sinfunction"
+    "sinfunction",
+    "movingline"
   ]
 }
