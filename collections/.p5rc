@@ -7,5 +7,6 @@
     "rectCircleDraw",
     "sinfunction",
     "movingline"
+    "movingCustomShape"
   ]
 }
