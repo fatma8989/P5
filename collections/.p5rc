@@ -6,7 +6,9 @@
     "listOfSequreCircle",
     "rectCircleDraw",
     "sinfunction",
-    "movingline"
-    "movingCustomShape"
+    "movingline",
+    "movingCustomShape",
+    "tringles",
+    "triangle"
   ]
 }
