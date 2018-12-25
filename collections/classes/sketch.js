@@ -8,8 +8,16 @@ function setup() {
 
 
 	for (i = 0; i < 20; i++) {
-		tmp = new Triangle(random(windowWidth), random(windowHeight),
-		 random(20,100), random(-0.1,0.1))
+		x = random(windowWidth)
+		y = random(windowHeight)
+		size = random(20,100)
+		rotation = random(-0.1,0.1)
+		color = {
+			r:random(255),
+			g:random(255),
+			b:random(255)
+		}
+		tmp = new Triangle(x,y,size,rotation,color)
 		listoftriangles.push(tmp)
 
 		//listoftriangles.push(new Triangle(x, y, size))

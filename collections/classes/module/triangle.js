@@ -1,5 +1,5 @@
 class Triangle { //create class 
-    constructor(x, y, size, r) {
+    constructor(x, y, size, r, color) {
         this.p1 = {
             x: 0,
             y: 0
@@ -17,6 +17,13 @@ class Triangle { //create class
             x: 0,
             y: 0
         }
+
+        this.color ={
+            r : color.r,
+            g :color.g,
+            b :color.b
+        }
+
 
         this.size = size
         this.setup(x, y)
@@ -42,6 +49,8 @@ class Triangle { //create class
             this.dirction.y = 1
         }
 
+        
+            
 
     }
     update() {
@@ -51,23 +60,23 @@ class Triangle { //create class
         let tcentery = this.p1.y + this.size / 4
 
         if (tcenterx < 20 || tcenterx > windowWidth - 20) {
-            
+
             this.dirction.x *= -1
 
         }
-        if(tcentery<20 || tcentery> windowHeight-20){
-                this.dirction.y*=-1
-               
+        if (tcentery < 20 || tcentery > windowHeight - 20) {
+            this.dirction.y *= -1
+
         }
 
 
         this.p1.x += this.dirction.x
         this.p2.x += this.dirction.x
         this.p3.x += this.dirction.x
-    
+
         this.p1.y += this.dirction.y
-        this.p2.y +=  this.dirction.y
-        this.p3.y +=  this.dirction.y
+        this.p2.y += this.dirction.y
+        this.p3.y += this.dirction.y
         this.fatma += this.rotation
 
     }
@@ -75,38 +84,40 @@ class Triangle { //create class
 
 
 
-        // tcenterx =s.p1.x + size / 2
-        // tcentery =s.p1.y + size / 4
-        // if(tcenterx <20 || tcenterx> windowWidth-20){
-        // 	this.dirction.x*=-1
-        // }
-        // if(tcentery<20 || tcentery> windowHeight-20){
-        // 	this.dirction.y*=-1
-        // }
+    // tcenterx =s.p1.x + size / 2
+    // tcentery =s.p1.y + size / 4
+    // if(tcenterx <20 || tcenterx> windowWidth-20){
+    // 	this.dirction.x*=-1
+    // }
+    // if(tcentery<20 || tcentery> windowHeight-20){
+    // 	this.dirction.y*=-1
+    // }
 
 
 
 
 
 
-        // translate(s.p1.x + size / 2, s.p1.y - size / 4)
-        // 	rotate(r)
-        // 	translate(-(s.p1.x + size / 2), -(s.p1.y - size / 4))
+    // translate(s.p1.x + size / 2, s.p1.y - size / 4)
+    // 	rotate(r)
+    // 	translate(-(s.p1.x + size / 2), -(s.p1.y - size / 4))
 
-        draw() {
-            push();
-            translate(this.p1.x + this.size / 2, this.p1.y - this.size / 4)
-            rotate(this.fatma)
-            translate(-(this.p1.x + this.size / 2), -(this.p1.y - this.size / 4))
-            triangle(this.p1.x, this.p1.y, this.p2.x, this.p2.y, this.p3.x,
-                this.p3.y)
+    draw() {
+        push();
+        translate(this.p1.x + this.size / 2, this.p1.y - this.size / 4)
+        rotate(this.fatma)
+        fill (this.color.r,this.color.g,this.color.b);
+        translate(-(this.p1.x + this.size / 2), -(this.p1.y - this.size / 4))
+        triangle(this.p1.x, this.p1.y, this.p2.x, this.p2.y, this.p3.x,
+            this.p3.y)
 
-            pop();
+        pop();
+        
 
-            
 
-
-        }
 
 
     }
+
+
+}
