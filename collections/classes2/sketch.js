@@ -1,18 +1,40 @@
-t=null
+listofrect = []
 
- function setup() {
+function setup() {
 	createCanvas(windowWidth, windowHeight);
-	x =40 
-	y=120
-	h= 80
-	w=80
-	t=new Rect (x,y,h,w)
 
-	m = new Rect2(windowWidth/2,windowHeight/2,50,50)
+	for (i = 0; i < 10; i++) {
+		listofrect.push(
 
+			new Rect(random(windowWidth), random(windowHeight), 80, 80)
+		)
+	}
+
+}
 
 function draw() {
-	t.draw()
-	m.draw()
+	background(200)
 
+	// for (i=0 ; i<listofrect.length ; i++){
+
+	// 	listofrect[i].draw()
+	// }
+	for(let i of listofrect){  //same the old for loop  i = object. 
+
+		i.draw()
+	}
+
+// for(let i in listofrect) >> i = index 
+}
+
+function mouseDragged() {
+	// for (i=0 ; i<listofrect.length ; i++){
+	// 	listofrect[i].mousedrag(mouseX,mouseY)
+
+	// }
+	for(let i of listofrect){
+		i.mousedrag(mouseX,mouseY)
+	}
+
+	
 }
